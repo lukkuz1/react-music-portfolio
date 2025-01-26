@@ -1,0 +1,15 @@
+/* Contact.css */
+.contact-header {
+    margin-top: 40px;
+    color: #007bff;
+  }
+  
+  .MuiTextField-root {
+    margin-bottom: 20px;
+  }
+  
+  .MuiButton-root {
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  

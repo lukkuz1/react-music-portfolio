@@ -1,0 +1,124 @@
+/* Register.css */
+.container {
+  display: flex;
+  flex: 1;
+  background-color: #ffffff; /* White background */
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+.scrollViewContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px; /* Restrict width for better responsiveness */
+  padding: 20px;
+}
+
+.logo-container {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.rectangle {
+  width: 100%;
+  padding: 30px;
+  background-color: #ffffff; /* White background for the form */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern look */
+}
+
+.label {
+  text-align: center;
+  color: #333; /* Dark text for the title */
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.forgot-password-button {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.sign-up-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.sign-up-text {
+  color: gray;
+  font-size: 14px;
+}
+
+.sign-up-link {
+  color: #007bff; /* Use blue for the link */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Style for TextFields (Inputs) */
+.MuiTextField-root {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.MuiOutlinedInput-root {
+  border-radius: 8px;
+}
+
+.MuiInputLabel-root {
+  color: #007bff; /* Blue color for the input labels */
+}
+
+.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+  border-color: #ddd; /* Light gray border */
+}
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #007bff; /* Blue border on hover */
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #007bff; /* Blue border on focus */
+}
+
+/* Style for Buttons */
+.MuiButton-root {
+  border-radius: 8px;
+  padding: 12px 20px;
+  text-transform: none;
+  font-weight: 600;
+  box-shadow: none;
+}
+
+.MuiButton-contained {
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.MuiButton-contained:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.MuiButton-root.MuiButton-containedPrimary {
+  background-color: #007bff; /* Same as the primary button color */
+}
+
+.MuiButton-root.MuiButton-containedPrimary:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Checkbox */
+.MuiCheckbox-root {
+  color: #007bff !important; /* Blue checkbox */
+}
+
+/* Input Field Icon */
+.MuiInputAdornment-root .MuiSvgIcon-root {
+  color: #007bff; /* Set the color of the icon to match the label */
+  font-size: 20px; /* Adjust size to match the input */
+}
