@@ -27,7 +27,6 @@ export const UserProvider: React.FC<Props> = ({ children }: Props) => {
   const [initialized, setInitialized] = useState<boolean>(false);
   const [user, setUser] = useState<UserData | null>(null);
 
-
   useEffect(() => {
     console.log(
       initialized
@@ -42,7 +41,6 @@ export const UserProvider: React.FC<Props> = ({ children }: Props) => {
     }
   }, [user]);
 
-
   const initialize = async (userData: UserData): Promise<void> => {
     try {
       setUser(userData);
@@ -51,7 +49,6 @@ export const UserProvider: React.FC<Props> = ({ children }: Props) => {
       const snapshot = await get(child(dbRef, `users/${userData.uid}`));
 
       if (!snapshot.exists()) {
-
         const newUserData = { email: userData.email };
         await update(ref(rtdb, `users/${userData.uid}`), newUserData);
       }
@@ -62,11 +59,9 @@ export const UserProvider: React.FC<Props> = ({ children }: Props) => {
     }
   };
 
-
   const destroy = () => {
     setUser(null);
   };
-
 
   const updateDataJSON = async (updateData: Record<string, unknown>): Promise<void> => {
     if (initialized && user) {

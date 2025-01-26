@@ -38,7 +38,6 @@ export const AuthProvider: React.FC<Props> = ({ children }: Props) => {
   const [user, setUser] = useState<UserData | null>(null);
   const { initialize, destroy, initialized } = useUser();
 
-  // Effect to manage user state and cleanup
   useEffect(() => {
     if (!user && initialized) {
       destroy();

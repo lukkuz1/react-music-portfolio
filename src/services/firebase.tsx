@@ -1,11 +1,9 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { initializeAuth, browserLocalPersistence, Auth } from "firebase/auth";
 import { getFirestore, Firestore } from "firebase/firestore";
 import { getDatabase, Database } from "firebase/database";
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyBF2EjPyU0GKeLu99KUx1GiE26B2xHQbiU",
   authDomain: "sventes-su-gediminu.firebaseapp.com",
@@ -18,7 +16,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
 // Initialize Firebase Auth with browser persistence
 export const auth: Auth = initializeAuth(app, {
@@ -30,5 +28,3 @@ export const db: Firestore = getFirestore(app);
 
 // Initialize Realtime Database
 export const rtdb: Database = getDatabase(app);
-
-export default { auth, db, rtdb };

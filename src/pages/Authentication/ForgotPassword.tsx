@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TextField, Button, Typography, Container, Box, Alert } from '@mui/material';
 import { sendPasswordResetEmail } from 'firebase/auth';
-import firebase from '../../services/firebase';
+import { auth } from '../../services/firebase';
 
 export default function ForgotPassword() {
   const [email, setEmail] = useState<string>('');
@@ -15,7 +15,7 @@ export default function ForgotPassword() {
         setError('Prašome įvesti teisingą el. paštą.');
         return;
       }
-      await sendPasswordResetEmail(firebase.auth, email);
+      await sendPasswordResetEmail(auth, email);
       setError('');
       alert('Slaptažodžio priminimo nuoroda išsiųsta į jūsų el. paštą.');
       navigate('/login');
